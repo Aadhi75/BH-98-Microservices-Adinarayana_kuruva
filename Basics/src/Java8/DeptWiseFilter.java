@@ -42,6 +42,7 @@ public class DeptWiseFilter {
 //		
 //		System.out.println(result);
 //		
+		
 		for(Department st : result.keySet()){
 			System.out.println(st+" = "+result.get(st));
 		}
