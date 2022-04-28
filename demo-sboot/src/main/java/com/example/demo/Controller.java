@@ -2,14 +2,13 @@ package com.example.demo;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@RestController // @Controller + @ResponseBody
 public class Controller {
 	
 	@RequestMapping("/")
-	@ResponseBody
+	//@ResponseBody
 	String hello() {
 		return "Hello, Welcome to this page";
 	}
