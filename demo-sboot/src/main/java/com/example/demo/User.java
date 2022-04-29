@@ -11,14 +11,30 @@ import javax.persistence.Id;
 public class User {
 	private @Id @GeneratedValue Long id;
 	private String name;
+	private Long marks;
 	
 	public User() {
 	}
+
+	public User(Long id, String name, Long marks) {
+		this.id = id;
+		this.name = name;
+		this.marks = marks;
+	}
+
 
 	public User(Long id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
+	}
+
+	public Long getMarks() {
+		return marks;
+	}
+
+	public void setMarks(Long marks) {
+		this.marks = marks;
 	}
 
 	public Long getId() {
