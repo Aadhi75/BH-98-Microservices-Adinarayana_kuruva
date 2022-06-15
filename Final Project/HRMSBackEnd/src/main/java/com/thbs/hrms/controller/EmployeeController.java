@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.thbs.hrms.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,13 +13,16 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.thbs.hrms.entity.Employee;
+import com.thbs.hrms.service.EmployeeService;
+
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class EmployeeController 
 {
 	@Autowired
-	EmployeeService employeeService;
+	private EmployeeService employeeService;
 	@GetMapping("/employees")
 	List<Employee> getAll()
 	{
